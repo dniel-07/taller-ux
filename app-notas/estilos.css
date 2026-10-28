@@ -1,0 +1,169 @@
+:root {
+    --primario: #0b5cad;
+    --primario-hover: #084784;
+    --texto: #1f2933;
+    --secundario: #52606d;
+    --fondo: #f4f6f8;
+    --borde: #9aa5b1;
+    --error: #b42318;
+    --exito: #067647;
+    --blanco: #ffffff;
+    --espacio: 16px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: var(--espacio);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--texto);
+    background: var(--fondo);
+  }
+  
+  .contenedor {
+    max-width: 650px;
+    margin: 32px auto;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+  
+  h2 {
+    font-size: 21px;
+    margin-top: 0;
+  }
+  
+  .subtitulo {
+    color: var(--secundario);
+    margin-bottom: 24px;
+  }
+  
+  .tarjeta {
+    background: var(--blanco);
+    padding: 24px;
+    border: 1px solid #d5dce3;
+    border-radius: 12px;
+    margin-bottom: 32px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin: 16px 0 6px;
+  }
+  
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    color: var(--texto);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--blanco);
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    min-height: 44px;
+    padding: 10px 16px;
+    font: inherit;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .principal {
+    width: 100%;
+    margin-top: 20px;
+    color: var(--blanco);
+    background: var(--primario);
+    border: 2px solid var(--primario);
+  }
+  
+  .principal:hover {
+    background: var(--primario-hover);
+  }
+  
+  .secundario {
+    color: var(--primario);
+    background: var(--blanco);
+    border: 1px solid var(--primario);
+  }
+  
+  .eliminar {
+    color: var(--error);
+    background: var(--blanco);
+    border: 1px solid var(--error);
+  }
+  
+  .nota {
+    padding: 18px;
+    margin: 12px 0;
+    background: var(--blanco);
+    border: 1px solid #d5dce3;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+  }
+  
+  .nota h3 {
+    margin: 0 0 8px;
+  }
+  
+  .nota p {
+    white-space: pre-wrap;
+  }
+  
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  #mensaje {
+    font-weight: bold;
+    overflow-wrap: anywhere;
+  }
+  
+  #mensaje.error {
+    color: var(--error);
+  }
+  
+  #mensaje.exito {
+    color: var(--exito);
+  }
+  
+  #mensaje.info {
+    color: var(--primario);
+  }
+  
+  :focus-visible {
+    outline: 3px solid #a15c00;
+    outline-offset: 3px;
+  }
+  
+  @media (max-width: 480px) {
+    .contenedor {
+      margin: 8px auto;
+    }
+  
+    .tarjeta {
+      padding: 18px;
+    }
+  
+    .acciones button {
+      flex: 1;
+    }
+  }
+  
